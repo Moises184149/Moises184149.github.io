@@ -1,63 +1,96 @@
-<!--
-    Unidad: Parcial No.1
-    Descripción: Elementos de contenido
-    Fecha: 06 de Febrero de 2024
--->
 <!DOCTYPE html>
-<html>
-    <!--Etiqueta encabezado-->
-    <head>
-        <!-- Etiqueta de titulo-->
-        <title>UPSLP - Programaci&oacute;n Web</title>
-    </head>
-    <!-- Etiqueta de cuerpo/contenido-->
+<html lang="es">
+<head>
+    <title>Programaci&oacute;n Web I</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="estilo/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo/sitio.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <script src="script/funciones.js"></script>
+    <!-- Inicia Barra de navegacion -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Inicia el menu colpsable -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#" onclick="restaurarContenido();"><img src="img/UPSLP (Logo).jpg" alt="LogoUPSLP" height="40px"></a>
+        </div>
+        <!-- Finaliza el menu colpsable -->
+        <!-- Inicial las opciones de menu-->            
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <!-- Primer elemento del menu-->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Aspirantes<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" id="p1_11" onclick="muestraArchivo('html/p1/ejercicio_1-1.html');return false;">Proceso de ingreso</a></li>
+              </ul>
+            </li>
+            <!-- Segundo elemento del menu-->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Universidad<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" id="mision" onclick="mostrarTextoMision(); return false;">Misi&oacute;n y Visi&oacute;n</a></li>
+                <li><a href="#" id="cultura" onclick="mostrarTextoCultura();return false;">Cultura y Deportes</a></li>
+              </ul>
+            </li>
+            <!-- Tercer elemento del menu-->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Oferta Educativa<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" id="lag" onclick="mostrarTextoLAG(); return false;">Licenciatura en Administración y Gestión (LAG)</a></li>
+                <li><a href="#" id="lmi" onclick="mostrarTextoLMI();return false;">Licenciatura en Mercadotecnia Internacional (LMI)</a></li>
+                <li><a href="#" id="itma" onclick="mostrarTextoITMA();return false;">Ingeniería en Tecnologías de Manufactura (ITMA)</a></li>
+                <li><a href="#" id="iti" onclick="mostrarTextoITI();return false;">Ingeniería en Tecnologías de la Información (ITI)</a></li>
+                <li><a href="#" id="isti" onclick="mostrarTextoISTI();return false;">Ingeniería en Sistemas y Tecnologías Industriales (ISTI)</a></li>
+                <li><a href="#" id="item" onclick="mostrarTextoITEM();return false;">Ingeniería en Telematica (ITEM)</a></li>
+              </ul>
+              
+            </li>
+            <!-- Cuarto elemento del menu-->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"  aria-expanded="false">Egresados</a>
+              <ul class="dropdown-menu" role="menu"></ul>
+            </li>
+            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" id="contacto" onclick="mostrarTextoContacto();return false;">Contacto</a></li>
+            <li>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Vinculaci&oacute;n</a>
+              <ul class="dropdown-menu" role="menu"></ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Ene-Jun 2024</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Finaliza las opciones de menu-->
+    </nav>
+    <!-- Finaliza Barra de navegacion -->
+    <!-- Inicia la seccion de contenido -->
+    <div class="container-fluid text-center">    
+      <div class="row content">
+        <div class="col-sm-2 sidenav">
+        </div>
+        <div class="col-sm-8 text-left" id="content" style="height: 800px"> 
+            <!-- Contenido -->
+        </div>
+        <div class="col-sm-2 sidenav">
+        </div>
+      </div>
+    </div>
+    <!-- Finaliza la seccion de contenido -->
+    <!-- Inicia el footer -->
     
-"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-    <body>
-        <!-- Etiqueta de titulo/encabezado de una seccion-->
-       <h1>Secretar&iacute;a de Educaci&oacute;n Publica</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt lectus odio, ut pulvinar lectus rhoncus quis. Donec id auctor quam. Vivamus non purus ac sapien vulputate aliquam. Integer eu quam aliquam, fringilla metus ac, varius turpis. Proin eu orci commodo, feugiat elit sed, convallis ipsum. Nulla ullamcorper, diam tincidunt finibus tincidunt, est erat molestie dui, ut dignissim ante erat sit amet massa. Vestibulum hendrerit eleifend velit sed commodo. Integer vitae auctor mi. Praesent lacus lacus, rhoncus id pellentesque lobortis, varius ultricies tellus. Integer fermentum feugiat turpis. Etiam aliquam suscipit mauris, in tristique lorem volutpat quis. Nullam eget mattis sem, a faucibus augue. Praesent dictum quam sed lorem semper, vitae placerat justo porta. Nunc aliquam ligula dolor, in placerat sem tempor sit amet.</p>
-            <br><br><br><br>
-            <p>Pellentesque sagittis iaculis mauris, non pulvinar sapien dapibus ac. Vestibulum pretium blandit nulla vel ornare. Proin id eros imperdiet, iaculis ex sed, aliquet tellus. Etiam ac libero et nibh tempus porttitor. Curabitur quis dolor vel dolor dapibus sagittis vitae eu erat. Donec non lorem ac velit lobortis tempor. Suspendisse viverra ante sed eros pulvinar tempus. Duis suscipit, sapien eu eleifend sodales, orci turpis dictum nunc, non placerat lectus diam vel nisi..</p>
-       <h2>Universidad Politecnica de San Luis Potosi</h2>
-       <h3>Academia de Tecnologias de la informacion y Telematica</h3>
-       <h4>Ingenieria en Tecnologias de la Informacion</h4>
-       <h5>Curso de Nucleo Optativo 1 - Programacion Web 1</h5>
-       <h6>HTML - HyperText Markup Language</h6>
-       <h7>HTML - HyperText Markup Language</h7>
-    </body>
-</html>             
-    <body>
-        <!--Etiqueta de encabezado de seccion-->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit massa orci, id tincidunt tortor cursus quis. Nam viverra nisi sed libero malesuada, nec ornare lorem maximus. Donec congue arcu non ligula sollicitudin, porttitor aliquet ligula molestie. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum mollis mi pulvinar urna semper, nec ullamcorper ligula ullamcorper. Integer eu ex ligula. In hac habitasse platea dictumst..</p>
-        <h1>Simbolos HTML</h1>
-        &aacute;&eacute;&iacute;&oacute;&uacute;<br>
-        &ntilde;<br>
-        &Aacute;&Eacute;&Iacute;&Oacute;&Uacute;<br>
-        <h6>Lista con s&iacute;mbolos</h6>
-            &nbsp;&#8627;Lunes<br>
-            &nbsp;&#8627;Martes<br>
-            &nbsp;&#8627;Mi&eacute;rcoles<br>
-            &nbsp;&#8627;Jueves<br>
-            &nbsp;&#8627;Viernes<br>
-            &nbsp;&#8627;S&aacute;bado<br>
-            &nbsp;&#8627;Domingo<br>
-        <h6></h6>
-        <h6>Lista con monedas</h6>
-        <img src="https://flagsapi.com/DE/shiny/32.png">(&euro;) Euro<br>
-        <img src="https://flagsapi.com/IT/shiny/32.png">(&#8356;) Lira<br>
-        <img src="https://flagsapi.com/FR/shiny/32.png">(&#8355;) Franco<br>
-        <img src="https://flagsapi.com/CO/shiny/32.png">(&#8353;) Colon<br>
-        <img src="https://flagsapi.com/BR/shiny/32.png">(&#8354;) Cruzeiro<br>
-        <img src="https://flagsapi.com/CN/shiny/32.png">(&#20803;) Yuan<br>
-        <img src="https://flagsapi.com/RU/shiny/32.png">(&#8381;) Rublo<br>
-        <img src="https://flagsapi.com/MX/shiny/32.png">(&dollar;) Peso<br>
-        <img src="https://flagsapi.com/US/shiny/32.png">(&dollar;) Dolar<br>
-        <img src="https://flagsapi.com/ES/shiny/32.png">(&euro;) Euro<br>
-        <img src="https://flagsapi.com/JP/shiny/32.png">(&yen;) Yen<br>
-        <img src="https://flagsapi.com/IN/shiny/32.png">(&#8377;) Rupia<br>
-        <img src="https://flagsapi.com/GB/shiny/32.png">(&pound;) Libra<br>
-        <img src="https://flagsapi.com/PT/shiny/32.png">(&euro;) Euro<br>
-        <h6></h6>
-    </body>
+    <!-- Finaliza el footer -->
 
+
+</body>
+</html>
