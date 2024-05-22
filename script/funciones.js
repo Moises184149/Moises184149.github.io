@@ -73,7 +73,10 @@ function mostrarTextoITEM(){ //Texto de ITEM
 }
 function mostrarTextoMision() { // texto de la mision y la vision
 	document.getElementById('content').innerHTML = 
-	`<h3>Misión</h3>
+	`<br>
+	<h2>Universidad</h2><br>
+	<img src="img/Universidad.jpg" width="850px"><br>
+	<h3>Misión</h3>
 	<p>La Universidad Politécnica de San Luis Potosí, está comprometida con la excelencia en la formación integral y humana, y con el aprendizaje, el desarrollo y la aplicación del nuevo conocimiento.</p>
 
 	<p>La Universidad Politécnica une a estudiantes, profesores y personal administrativo para crear una comunidad de la más alta calidad académica basada en un modelo educativo abierto y flexible, y comprometida con el progreso social y económico del estado y del país.</p>
@@ -89,7 +92,7 @@ function mostrarTextoMision() { // texto de la mision y la vision
 	
 	<p>La Universidad desarrolla actividades estratégicas en el campo de la innovación tecnológica en las áreas de conocimiento que cultiva, siendo un participante activo del sistema de innovación de la región, realizando proyectos conjuntos con empresas y gobiernos y ofreciendo servicios de capacitación, consultoría y desarrollo tecnológico de alto nivel al sector empresarial. Forma parte de redes de colaboración académica, nacionales e internacionales, en las cuales contribuye en temas de vanguardia tecnológica.</p>
 	
-	<p>La Universidad se caracteriza por una intensa vida académica y cultural, que abre sus puertas cotidianamente a la sociedad para compartir y difundir con ella sus trabajos científicos, tecnológicos y culturales. </p>`
+	<p>La Universidad se caracteriza por una intensa vida académica y cultural, que abre sus puertas cotidianamente a la sociedad para compartir y difundir con ella sus trabajos científicos, tecnológicos y culturales. </p><br><br>`
 	
 }
 function mostrarTextoCultura(){
@@ -102,9 +105,7 @@ function mostrarTextoCultura(){
 		<li>Futbol rapido</li>
 		<li>Basquetbol</li>
 		<li>Volibol</li>
-		<li>Tae kwon Do<br>
-			<img src="img/Tae-kwon-do.jpg" alt="Imagen de ITEM" width="100px">
-		</li>
+		<li>Tae kwon Do<br></li>
 		<li>Karate</li>
 		<li>Ajedrez</li>
 		<li>Atletismo</li>
@@ -113,8 +114,13 @@ function mostrarTextoCultura(){
 		<li>Guitarra</li>
 		<li>Karate</li>
 		<li>Baile-fitnnes</li>
-		<li>Coro</li>
-		
+		<li>Coro</li><br><br>
+		<img src="img/Tae-kwon-do.jpg" width="200px"> &ensp; &ensp;
+		<img src="img/Yoga.jpg" width="200px"> &ensp; &ensp;
+		<img src="img/Basketball.jpg" width="200px"><br><br>
+		<img src="img/Volleyball.jpg" width="200px"> &ensp; &ensp;
+		<img src="img/Soccer.jpg" width="200px"> &ensp; &ensp;
+		<img src="img/Futbol Rapido.jpg" width="200px"> &ensp; &ensp;
 	</ul>`
 }
 function mostrarTextoContacto() {
@@ -252,5 +258,21 @@ function mostrarTextoContacto() {
 	<a href=mailto:juridico@upslp.edu.mx>juridico@upslp.edu.mx</a></p>`
 }
 function restaurarContenido() {
-	document.getElementById('content').innerHTML = ``;
+	document.getElementById('content').innerHTML = `
+	`;
+}
+function mostrarEgresados(){
+	document.getElementById('content').innerHTML = 
+	`<h2>Egresados</h2><br><br>
+	<img src="img/Egresados1.jpg" width="190px">&ensp;&ensp;&ensp;&ensp;
+	<img src="img/Egresados2.jpg" width="190px">&ensp;&ensp;&ensp;&ensp;
+	<img src="img/Egresados3.jpg" width="190px">&ensp;&ensp;&ensp;&ensp;
+	<img src="img/Egresados4.jpg" width="190px"><br><br><br>
+	<p>La UPSLP en coordinación con Trajando.com te ofrece la Bolsa de Trabajo para que  registres tu CV  y tengas acceso a posiciones de trabajo nacionales</p>
+	<a href="https://www.facebook.com/vinculacion.upslp">https://www.facebook.com/vinculacion.upslp</a>
+	<h3>Credencial de Egresado</h3>
+	<p>Obtén tu credencial de egresado y mantente en contacto con tu universidad. Para mantener tus beneficios solicita tu credencial en Servicios Escolares</p><br>
+	<img src="img/BMW.gif" width="300px"><br><br>
+	
+	`;
 }
